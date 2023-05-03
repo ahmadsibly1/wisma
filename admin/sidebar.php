@@ -2,8 +2,8 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <img src="../assets/dist/img/logorskd.svg" alt="Logo Wisma RSKD" class="brand-image img-circle elevation-3 bg-white" style="opacity: .8">
+            <span class="brand-text font-weight-light">Administrator</span>
         </a>
 
         <!-- Sidebar -->
@@ -35,8 +35,10 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                    <li class="nav-item menu-open">
-                        <a href="#" class="nav-link active">
+                    <li class="nav-item">
+                        <a href="dashboard.php" class="nav-link <?php if ($title == 'Dashboard') {
+                                                                    echo 'active';
+                                                                } ?>">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Dashboard
@@ -45,7 +47,9 @@
 
                     </li>
                     <li class="nav-item">
-                        <a href="reservasi.php" class="nav-link">
+                        <a href="reservasi.php" class="nav-link <?php if ($title == 'Reservasi') {
+                                                                    echo 'active';
+                                                                } ?>">
                             <i class="nav-icon fas fa-th"></i>
                             <p>
                                 Reservasi
@@ -53,9 +57,11 @@
                         </a>
                     </li>
                     </li>
-                    <li class="nav-header">CheckIn / CheckOut</li>
+                    <li class="nav-header">Master Data</li>
                     <li class="nav-item">
-                        <a href="data-kamar.php" class="nav-link">
+                        <a href="data-kamar.php" class="nav-link <?php if ($title == 'Data-Kamar') {
+                                                                        echo 'active';
+                                                                    } ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Kamar
@@ -63,16 +69,28 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="data-tamu.php" class="nav-link">
+                        <a href="data-tamu.php" class="nav-link <?php if ($title == 'Data-Tamu') {
+                                                                    echo 'active';
+                                                                } ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Tamu
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="data-pegawai.php" class="nav-link <?php if ($title == 'Data-Pegawai') {
+                                                                        echo 'active';
+                                                                    } ?>">
+                            <i class="nav-icon far fa-calendar-alt"></i>
+                            <p>
+                                Pegawai
                             </p>
                         </a>
                     </li>
                     <li class="nav-header">DATA</li>
                     <li class="nav-item">
-                        <a href="data-kamar.php" class="nav-link">
+                        <a href="data-kamar.php" class="nav-link <?php $title = 'Data' ? 'active' : ''; ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Kamar
@@ -80,10 +98,20 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="data-tamu.php" class="nav-link">
+                        <a href="data-tamu.php" class="nav-link ">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
                                 Tamu
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="data-pegawai.php" class="nav-link <?php if ($title == 'Data-Pegawai') {
+                                                                        echo 'active';
+                                                                    } ?>">
+                            <i class="nav-icon far fa-calendar-alt"></i>
+                            <p>
+                                Pegawai
                             </p>
                         </a>
                     </li>

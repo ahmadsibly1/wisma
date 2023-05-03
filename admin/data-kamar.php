@@ -1,4 +1,5 @@
-<?php $title = "Data Kamar"; ?>
+<?php $title = "Data-Kamar"; ?>
+<?php $titlePage = "Data Kamar"; ?>
 <?php include '../config/koneksi.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'navbar.php'; ?>

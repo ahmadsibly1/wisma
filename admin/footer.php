@@ -95,6 +95,9 @@
             "autoWidth": false,
             "responsive": true,
         });
+        $(document).ready(function() {
+            $('#pegawai').DataTable();
+        });
     });
 </script>
 </body>

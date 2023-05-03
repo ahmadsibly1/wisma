@@ -1,4 +1,5 @@
-<?php $title = "Data Tamu"; ?>
+<?php $title = "Data-Tamu"; ?>
+<?php $titlePage = "Data Tamu"; ?>
 <?php include 'header.php'; ?>
 <?php include 'navbar.php'; ?>
 <?php include 'sidebar.php'; ?>
