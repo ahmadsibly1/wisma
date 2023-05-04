@@ -11,7 +11,13 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                 <div class="image">
-                    <img src="../assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                    <?php
+                    include '../config/koneksi.php';
+                    $query = mysqli_query($koneksi, "SELECT * FROM pegawai WHERE nama_pegawai = 'Feby'");
+                    $pegawai = mysqli_fetch_array($query);
+
+                    ?>
+                    <img src="../assets/file/<?= $pegawai['foto']; ?>" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
                     <a href="#" class="d-block">Alexander Pierce</a>
@@ -88,20 +94,24 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-header">DATA</li>
+                    <li class="nav-header">RESERVASI</li>
                     <li class="nav-item">
-                        <a href="data-kamar.php" class="nav-link <?php $title = 'Data' ? 'active' : ''; ?>">
+                        <a href="checkin.php" class="nav-link <?php if ($title == 'Checkin') {
+                                                                    echo 'active';
+                                                                } ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
-                                Kamar
+                                Check In
                             </p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="data-tamu.php" class="nav-link ">
+                        <a href="data-tamu.php" class="nav-link <?php if ($title == 'Data-Tamu') {
+                                                                    echo 'active';
+                                                                } ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
-                                Tamu
+                                Check Out
                             </p>
                         </a>
                     </li>
@@ -111,7 +121,7 @@
                                                                     } ?>">
                             <i class="nav-icon far fa-calendar-alt"></i>
                             <p>
-                                Pegawai
+                                Tamu In House
                             </p>
                         </a>
                     </li>

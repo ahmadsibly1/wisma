@@ -21,7 +21,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="tambah/tambah-pegawai.php" method="post">
+                <form action="tambah/tambah-pegawai.php" method="post" enctype="multipart/form-data">
                     <div class="modal-body">
                         <div class="form-group row">
                             <label for="nama_pegawai" class="col-sm-4 col-form-label">Nama Pegawai</label>
@@ -87,10 +87,10 @@
             <tr>
                 <th>No</th>
                 <th>Nama Pegawai</th>
+                <th>Foto</th>
                 <th>Alamat</th>
                 <th>No HP</th>
                 <th>Gender</th>
-                <th>Foto</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -104,10 +104,14 @@
                 <tr>
                     <td><?= $no; ?></td>
                     <td><?= $pegawai['nama_pegawai']; ?></td>
+                    <td>
+                        <a href="../assets/file/<?= $pegawai['foto']; ?>" target="_blank">
+                            <img src="../assets/file/<?= $pegawai['foto']; ?>" alt="" width="70" class="img-circle elevation-2">
+                        </a>
+                    </td>
                     <td><?= $pegawai['alamat']; ?></td>
                     <td><?= $pegawai['no_telp']; ?></td>
                     <td><?= $pegawai['jk']; ?></td>
-                    <td><?= $pegawai['foto']; ?></td>
                     <td>
                         <!-- edit -->
                         <a href="edit-pegawai.php?id_pegawai=<?= $pegawai['id_pegawai']; ?>" class=" btn btn-success btn-sm">

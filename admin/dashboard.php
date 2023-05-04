@@ -1,4 +1,5 @@
 <?php $title = "Dashboard"; ?>
+<?php $titlePage = "Dashboard"; ?>
 <?php include '../config/koneksi.php'; ?>
 <?php include 'header.php'; ?>
 <?php include 'navbar.php'; ?>
